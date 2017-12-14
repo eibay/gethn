@@ -1,24 +1,14 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a hacker news aggregator web application. The main topic to gather was preset initially and gets fetched once every hour. It allows user to hover and delete news from the main page or view it in detail on a separate page. The news are being persisted in the database as well. 
 
-Things you may want to cover:
+Run these commands from your terminal in order to use this program:
+- git clone https://github.com/eibay/gethn   : creates a local copy to your computer
+- run "rails db:create db:migrate"           : builds database and tables
 
-* Ruby version
+This app is built using these technologies:
 
-* System dependencies
+- Ruby 2.4.2
+- Rails 5.1.4
+- Postgresql database 
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
