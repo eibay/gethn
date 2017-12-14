@@ -1,6 +1,6 @@
 
-#GetHN 
- =====
+GetHN 
+=====
 This is a hacker news aggregator web application. The main topic to gather was preset initially and gets fetched once every hour. It allows user to hover and delete news from the main page or view it in detail on a separate page. The news are being persisted in the database as well. 
 
 Run these commands from your terminal in order to use this program:
