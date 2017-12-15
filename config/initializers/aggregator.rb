@@ -1,5 +1,5 @@
 require 'HTTParty'
-
+require 'rufus-scheduler'
 
 def is_story_id_uniq?(id)
   Article.exists?(story_id: id) ? false : true
@@ -25,16 +25,8 @@ def fetchData()
   end
 end
 
-
-def every_n_seconds(n)
-    loop do
-      before = Time.now
-      yield
-      interval = n-(Time.now-before)
-      sleep(interval) if interval > 0
-    end
-  end
-  every_n_seconds(60) do
-    fetchData
-    puts "Data was successfully fetch time at: #{Time.now.strftime("%X")}!"
+scheduler = Rufus::Scheduler.singleton
+hourly_fetch = scheduler.every '1m' do 
+  puts "Fetching now..#{Time.now.strftime('%X')}!"
+  fetchData
 end
