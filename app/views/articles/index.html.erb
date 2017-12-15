@@ -1,0 +1,5 @@
+<% @articles.each do |a|%>
+<h2><%= a.title %></h2>
+<h2> - <%= a.author %> - </h2>
+<h3><%= convertTime(a.created_at) %></h3>
+<% end %>
