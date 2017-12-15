@@ -17,16 +17,20 @@ def collectDetails(article, title)
 end
 
 def fetchData()
+  puts "Fetching now..#{Time.now.strftime('%X')}!"
   titles = []
   url = "http://hn.algolia.com/api/v1/search_by_date?query=nodejs"
   response = HTTParty.get(url, :headers =>{'Content-Type' => 'application/json'})
-  response["hits"].each do |story|
-    ( story["title"] ? collectDetails(story, story["title"]) : collectDetails(story, story["story_title"]))
+  if response
+    response["hits"].map do |story|
+      ( story["title"] ? collectDetails(story, story["title"]) : collectDetails(story, story["story_title"]))
+    end
+    puts "Fetching completed.. #{Time.now.strftime('%X')}!"
   end
 end
 
+fetchData
 scheduler = Rufus::Scheduler.singleton
-hourly_fetch = scheduler.every '1m' do 
-  puts "Fetching now..#{Time.now.strftime('%X')}!"
+hourly_fetch = scheduler.every '1m' do
   fetchData
 end
