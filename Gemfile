@@ -16,6 +16,7 @@ gem 'httparty'
 gem 'rufus-scheduler'
 gem 'materialize-sass'
 gem 'material_icons'
+gem 'react-rails'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
