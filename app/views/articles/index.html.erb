@@ -1,5 +1,25 @@
-<% @articles.each do |a|%>
-<h2><%= a.title %></h2>
-<h2> - <%= a.author %> - </h2>
-<h3><%= convertTime(a.created_at) %></h3>
-<% end %>
+<div class="container">
+  <table class="highlight responsive-table bordered">
+    <thead>
+      <tr>
+        <th class="col s3" colspan="3">Title</th>
+        <th class="col s2">Author</th>
+        <th class="col s4">Date Posted</th>
+        <th class="col s3">Total: (<%= @articles_total %>)</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @articles.each do |a|%>
+        <tr>
+          <td class="col s3" colspan="3"><%= a.title %></td>
+          <td class="col s2"><%= a.author %></td>
+          <td class="col s4"><%= convertTime(a.created_at) %></td>
+          <td class="col s3"><%= button_to "delete", {:controller => :articles,
+            :action => 'destroy', :id => a.id },
+            :method => :delete, class: "btn waves-effect waves-red" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
