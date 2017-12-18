@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Article.create([
+  { title: "The great journey into nodejs", author: "milan"},
+  { title: "Successful startups using nodejs", author: "mozart"},
+  { title: "Getting to know nodeJS", author: "hobart"},
+  { title: "Getting rid of NodeJS", author: "jose v."}
+])

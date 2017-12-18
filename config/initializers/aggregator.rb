@@ -19,7 +19,7 @@ end
 def fetchData()
   puts "Fetching now..#{Time.now.strftime('%X')}!"
   titles = []
-  url = "http://hn.algolia.com/api/v1/search_by_date?query=nodejs"
+  url = "https://hn.algolia.com/api/v1/search_by_date?query=nodejs"
   response = HTTParty.get(url, :headers =>{'Content-Type' => 'application/json'})
   if response
     response["hits"].map do |story|
