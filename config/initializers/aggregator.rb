@@ -33,6 +33,6 @@ end
 fetchData
 
 scheduler = Rufus::Scheduler.singleton
-hourly_fetch = scheduler.every '5m' do
+hourly_fetch = scheduler.every '60m' do
   fetchData
 end

@@ -10,7 +10,8 @@ This is a hacker news aggregator web application. The main topic to gather was p
   - "open http://localhost:3000"                 : opens default browser window
 
 ### Settings
-  - The default hourly fetch interval can be changed from *"config/initializers/aggregator.rb"*
+  - The default hourly fetch interval can be changed from *"config/initializers/aggregator.rb"* at line 36,
+  *hourly_fetch = scheduler.every '60m'*  :means 60 minutes
 
 ### This app is built using these technologies. Kindly visit the link if you have not installed them yet.
 - Version system : [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
