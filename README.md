@@ -1,6 +1,6 @@
 GetHN
 =====
-This is a hacker news aggregator web application. The main topic to gather was preset initially as "nodejs" and gets fetched once every hour. It allows user to hover and delete news from the main page or view it in detail on a separate page. "Remove" button sets display flag to off and will no longer be displayed on the listing. "Delete" button will totally remove a single record from database. During the initial launch, data is persisted right away in the database.
+This is a hacker news aggregator web application. The main topic to gather was preset initially as "nodejs" and gets fetched once every hour. It allows user to hover and delete news from the main page or view it in detail on a separate page. "Remove" button sets display flag to off and will no longer be displayed on the listing. "Delete" button will totally remove a single record from database. During the initial launch, data is persisted right away in the database. Feel free to view the demo of [GetHN](https://gethn.herokuapp.com/) deployed in heroku.
 
 ### Run these commands from your terminal in order to use this program:
   - "command T" or "ctrl T"                      : command T for mac / ctrl T for windows to open a new terminal window
@@ -24,5 +24,5 @@ This is a hacker news aggregator web application. The main topic to gather was p
 - MVC Framework  : [Rails 5.1.4](http://rubyonrails.org/)
 - Database       : [Postgresql](http://postgresguide.com/setup/install.html)
 
-### Feedback And Support 
+### Feedback And Support
 - web: [eibayan.com](http://eibayan.com)
