@@ -2,7 +2,7 @@ require 'HTTParty'
 require 'rufus-scheduler'
 
 def is_story_id_uniq?(id)
-  Article.exists?(story_id: id) ? false : true
+    Article.exists?(story_id: id) ? false : true
 end
 
 def collectDetails(article, title)

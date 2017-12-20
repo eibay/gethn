@@ -4,8 +4,8 @@
       <tr>
         <th class="col s3" colspan="3">Title</th>
         <th class="col s2">Author</th>
-        <th class="col s4">Date Posted</th>
-        <th class="col s3">Total: (<%= @articles_total %>)</th>
+        <th class="col s3">Date Posted</th>
+        <th class="col s4 colspan=2">Total: (<%= @articles_total %>)</th>
       </tr>
     </thead>
 
@@ -14,10 +14,12 @@
         <tr>
           <td class="col s3" colspan="3"><%= a.title %></td>
           <td class="col s2"><%= a.author %></td>
-          <td class="col s4"><%= convertTime(a.created_at) %></td>
-          <td class="col s3"><%= button_to "delete", {:controller => :articles,
+          <td class="col s3"><%= convertTime(a.created_at) %></td>
+          <td class="col s2"><%= link_to 'Show', article_path(a), class:"btn waves-effect" %></td>
+          <td class="col s2"><%= link_to 'Remove', article_path(a) , :method => 'patch', class:"btn waves-effect" %></td>
+          <td class="col s2"><%= button_to "Delete", {:controller => :articles,
             :action => 'destroy', :id => a.id },
-            :method => :delete, class: "btn waves-effect waves-red" %></td>
+            :method => 'delete', class: "btn waves-effect" %></td>
         </tr>
       <% end %>
     </tbody>

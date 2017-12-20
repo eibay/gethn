@@ -1,0 +1,19 @@
+<div class="container">
+  <ul class="collapsible" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header active"><i class="material-icons">create</i>Title</div>
+      <div class="collapsible-body"><span><h5><%= @article.title %></h5></span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">account_circle</i>Author</div>
+      <div class="collapsible-body"><span><h5><%= @article.title %></h5></span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">date_range</i>Date Created</div>
+      <div class="collapsible-body"><span><h5><%= @article.created_at %></h5></span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><%= link_to "Back", articles_path, class: "btn waves-effect" %></div>
+    </li>
+  </ul>
+</div>
