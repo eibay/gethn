@@ -2,24 +2,33 @@
   <table class="highlight responsive-table bordered">
     <thead>
       <tr>
-        <th class="col s3" colspan="3">Title</th>
+        <th class="col s4" colspan="3">Title</th>
         <th class="col s2">Author</th>
         <th class="col s3">Date Posted</th>
-        <th class="col s4 colspan=2">Total: (<%= @articles_total %>)</th>
+        <th class="col s3 colspan=1">Total: (<%= @articles_total %>)</th>
+        <th class="col s3 colspan=2">Remove: (<%= @articles_remove_count %>)</th>
+
       </tr>
     </thead>
 
     <tbody>
       <% @articles.each do |a|%>
         <tr>
-          <td class="col s3" colspan="3"><%= a.title %></td>
+          <td class="col s4" colspan="3"><%= a.title %></td>
           <td class="col s2"><%= a.author %></td>
           <td class="col s3"><%= convertTime(a.created_at) %></td>
-          <td class="col s2"><%= link_to 'Show', article_path(a), class:"btn waves-effect" %></td>
-          <td class="col s2"><%= link_to 'Remove', article_path(a) , :method => 'patch', class:"btn waves-effect" %></td>
-          <td class="col s2"><%= button_to "Delete", {:controller => :articles,
-            :action => 'destroy', :id => a.id },
-            :method => 'delete', class: "btn waves-effect" %></td>
+          <td class="col s1"><%= link_to "<i class=\"material-icons\">find_in_page</i>".html_safe,
+              article_path(a) , :method => 'get', class:"tooltipped",
+              data: {position: "bottom", tooltip: "Show Details", delay: "50" }%>
+          </td>
+          <td class="col s1"><%= link_to "<i class=\"material-icons\">delete</i>".html_safe,
+              article_path(a) , :method => 'patch', class: "tooltipped",
+              data: {position: "bottom", tooltip: "Remove From List", delay: "50" } %>
+          </td>
+          <td class="col s1"><%= link_to "<i class=\"material-icons\">delete_forever</i>".html_safe,
+              article_path(a) , :method => 'delete', class:"tooltipped",
+              data: {position: "bottom", tooltip: "Delete Forever", delay: "50" } %>
+          </td>
         </tr>
       <% end %>
     </tbody>

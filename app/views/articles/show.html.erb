@@ -10,10 +10,10 @@
     </li>
     <li>
       <div class="collapsible-header"><i class="material-icons">date_range</i>Date Created</div>
-      <div class="collapsible-body"><span><h5><%= @article.created_at %></h5></span></div>
+      <div class="collapsible-body"><span><h5><%= (@article.created_at).strftime('%d-%b-%y | %H:%M:%S') %></h5></span></div>
     </li>
     <li>
-      <div class="collapsible-header"><%= link_to "Back", articles_path, class: "btn waves-effect" %></div>
+      <div class="collapsible-header"><%= link_to "Back", root_path, class: "btn waves-effect" %></div>
     </li>
   </ul>
 </div>

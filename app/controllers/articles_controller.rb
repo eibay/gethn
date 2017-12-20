@@ -4,7 +4,8 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all.where(is_active: true).order('created_at DESC')
     @articles_total = @articles.count
-    @fetch_time = Time.now
+    articles_remove = Article.all.where(is_active: false).order('created_at DESC')
+    @articles_remove_count = articles_remove.count
   end
 
   def show
