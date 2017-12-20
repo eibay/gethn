@@ -1,4 +1,4 @@
-require 'HTTParty'
+require 'httparty'
 require 'rufus-scheduler'
 
 def is_story_id_uniq?(id)
