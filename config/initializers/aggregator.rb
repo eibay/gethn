@@ -30,7 +30,7 @@ def fetchData()
 end
 
 # Force to run initially to ensure there's data to display
-# fetchData
+fetchData
 
 scheduler = Rufus::Scheduler.singleton
 hourly_fetch = scheduler.every '60m' do
