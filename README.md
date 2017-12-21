@@ -2,11 +2,19 @@ GetHN
 =====
 This is a hacker news aggregator web application. The main topic to gather was preset initially as "nodejs" and gets fetched once every hour. It allows user to hover and delete news from the main page or view it in detail on a separate page. "Remove" button sets display flag to off and will no longer be displayed on the listing. "Delete" button will totally remove a single record from database. During the initial launch, data is persisted right away in the database. Feel free to view the demo of [GetHN](https://gethn.herokuapp.com/) deployed in heroku.
 
-### Run these commands from your terminal in order to use this program:
+### Prerequisite:
+Ensure that you have ruby and rails installed on your system. If not, kindly visit their main site respectively below for more detailed instructions and getting started information:
+
+  - [Ruby Installation](https://www.ruby-lang.org/en/documentation/installation/)
+
+  - [Rails Getting Started](http://guides.rubyonrails.org/getting_started.html)
+
+### Run these commands from your terminal in order to use this program.
   - "command T" or "ctrl T"                      : command T for mac / ctrl T for windows to open a new terminal window
   - "git clone https://github.com/eibay/gethn"   : creates a local copy to your computer
+  - "bundle install"                             : gathers all the dependencies gems
   - "rails db:create db:migrate"                 : builds database, tables and initial data
-  - "rails db:seed"                              : (optional) pre-populate database with initial records of data                  
+  - "rails db:seed"                              : (optional) pre-populate database with initial records of data
   - "rails server"                               : runs the rails server and force the initial download of news data
   - "open http://localhost:3000"                 : opens default browser window
 
@@ -17,6 +25,7 @@ This is a hacker news aggregator web application. The main topic to gather was p
 ### Future implementations
   - rendering of frontend every time there's a new record on database without page refresh
   - test coverage
+  - search function with term suggestions
 
 ### This app is built using these technologies. Kindly visit the link if you have not installed them yet.
 - Version system : [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
