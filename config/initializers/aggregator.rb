@@ -29,7 +29,7 @@ def fetchData()
   end
 end
 
-Force to run initially to ensure there's data to display
+//Force to run initially to ensure there's data to display
 fetchData
 
 scheduler = Rufus::Scheduler.singleton
